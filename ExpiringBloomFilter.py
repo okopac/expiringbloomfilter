@@ -65,7 +65,7 @@ class ExpiringBloomFilter():
 
         # Update the global filter (a combination of all filters)
         self.__global_filter = pybloom.pybloom.BloomFilter(
-            capacity = self.capacity
+            capacity = self.capacity,
             error_rate = self.error_rate
             )
         for bf in self.__filters:
